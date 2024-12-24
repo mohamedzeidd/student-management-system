@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="loginBox">
+        <h2>login</h2>
+        <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px">
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div>
+            <input type="radio" id="student" name="type" value="student">
+            <label for="student">Student</label><br>
+            <input type="radio" id="staff" name="type" value="staff">
+            <label for="staff">Doctor</label><br>
+            <input type="radio" id="admin" name="type" value="admin">
+            <label for="admin">Admin</label>
+        </div>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+    </div>
+</body>
+</html>

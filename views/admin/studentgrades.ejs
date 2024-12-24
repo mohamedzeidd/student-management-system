@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="student-grades" method="post">
+
+        <div class="container">
+          <label for="name"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="name" required>
+          
+        
+        </div>
+    </form>
+    <% subject.forEach(subjects => {%>
+        <li class="list-group-item">
+          <p>Course : <%=subjects.name%></p></li><label for="grade"><b>Grade</b></label>
+          <input type="text" placeholder="Enter Course grade" name="grade" required>
+   <% })%>
+</body>
+</html>

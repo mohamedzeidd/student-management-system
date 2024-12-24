@@ -1,0 +1,28 @@
+<!-- student-grade.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/display.css">
+</head>
+<body>
+    <h1>Search Results</h1>
+    
+    <% if (student) { %>
+        <h2>Student: <%= student.name %></h2>
+        <h3>Subjects</h3>
+        <ul>
+            <% student.subjects.forEach(subject => { %>
+                <li>
+                    <%= subject.name %>: <%= subject.grade || "Not graded" %>
+                    
+                        <form action="/add-grade/<%= student._id %>/<%= subject._id %>" method="POST">
+                            <input type="text" name="grade" placeholder="Enter grade">
+                            <button type="submit">Submit Grade</button>
+                        </form>
+                    
+                </li>
+            <% }); %>
+        </ul>
+    <% } %>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/display.css">
+</head>
+<body>
+    <form action="/all-users" method="get">
+
+        <div class="container">
+          <label for="studentname"><b>Student name</b></label>
+          <input type="text" placeholder="Enter Student Name" name="studentname" required>
+          <button type="submit">Search</button>
+        
+    </div>
+    </form>
+        
+    <div class="container"> 
+        <%for(let i = 0 ; i<users.length ; i++){%> 
+            <div class="subject">   
+            <p>Student Name : <%=users[i].name%></p>
+            <p>Student department : <%=users[i].department%></p>
+            <br><br><br>
+            <button><a href="/delete-users/<%=users[i]._id %>">Delete</a></button> 
+            <button>Update</button>
+            </div>
+        <%}%>
+        
+        </div>
+
+
+</body>
+</html>

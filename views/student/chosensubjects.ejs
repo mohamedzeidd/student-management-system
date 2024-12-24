@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/display.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/chosensubjects" method="post">
+
+      <div class="container">
+        <label for="coursename"><b>Course Name</b></label>
+        <input type="text" placeholder="Enter Course Name" name="coursename" required>
+        <label for="code"><b>Code</b></label>
+        <input type="text" placeholder="Enter code" name="code" required>
+        <button type="submit">ADD</button>
+      
+      </div>
+      </form>
+      
+      <div class="container">
+        <ul class="list-group my-5">
+     
+            
+     <h1>List of Subjects</h1>
+    <ul>
+        <%for(let i = 0 ; i<subject.length ; i++){%>
+            <div class="sub">
+            <p>course name : <%=subject[i].name%></p>
+            <p>code : <%=subject[i].code%></p>
+            <form action="/delete-subject/<%= subject[i]._id %>" method="post" style="display:inline;">
+                <button type="submit">Delete</button>
+              </form>
+            <br><br><br>      
+            </div>
+        <%}%>
+    </ul>
+    
+</body>
+</html>

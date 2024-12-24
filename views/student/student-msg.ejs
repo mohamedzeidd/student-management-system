@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages</title>
+</head>
+<body>
+  <h1>Messages</h1>
+  
+  <!-- Display messages -->
+  <h2>Received Messages</h2>
+  <ul>
+    <% messages.forEach(message => { %>
+      <li>
+        <strong>From:</strong> <%= message.sender %><br>
+        <strong>Message:</strong> <%= message.message %><br>
+        <strong>Timestamp:</strong> <%= message.timestamp %>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

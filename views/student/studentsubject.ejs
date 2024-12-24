@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/st.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <%for(let i = 0 ; i<subjects.length ; i++){%>
+        <div class="sub">
+        <p>course name : <%=subjects[i].name%></p>
+        <p>type : <%=subjects[i].department%></p>
+        <p>code : <%=subjects[i].code%></p>
+
+        <br><br><br>      
+        </div>
+    <%}%>
+</div>
+
+</body>
+</html>

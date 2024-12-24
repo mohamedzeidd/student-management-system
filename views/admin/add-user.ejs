@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="stylesheet" href="/st.css">
+</head>
+<body>
+
+    
+    <form action="/add-user" method="post">
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+
+        <label for="dap"><b>Department</b></label>
+        <input type="text" placeholder="Enter Department" name="department" required>
+
+        <label for="Email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Email" name="email" required>
+        <br>
+        <label for="nationality"><b>Nationality</b></label>
+        <input type="text" placeholder="Enter nationality" name="nationality" required>
+
+        <label for="dateofbirth"><b>date of birth</b></label>
+        <input type="date" placeholder="Enter date of birth" name="dateofbirth" required>
+        
+        <br>
+        
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+        <label for = "level">Level</label>
+        <input type = "radio" id = "one" name = "level" value = "1" required>
+        <label for = "one" >1</label>
+    
+        <input type = "radio" id = "two" name = "level" value = "2" required>
+        <label for = "two" >2</label>
+
+    
+        <input type = "radio" id = "three" name = "level" value = "3" required>
+        <label for = "three" >3</label>
+
+        <input type = "radio" id = "four" name = "level" value = "4" required>
+        <label for = "four" >4</label>
+        <br>
+
+        <input type = "radio" id = "student" name = "type" value = "student" required>
+        <label for = "student" >Student</label>
+    
+        <input type = "radio" id = "staff" name = "type" value = "staff" required>
+        <label for = "staff" >Staff</label>
+
+    
+        <input type = "radio" id = "admin" name = "type" value = "admin" required>
+        <label for = "admin" >Admin</label>
+        <button type="submit">Add User</button>
+      
+      </div>
+      </form>
+
+
+</body>
+</html>

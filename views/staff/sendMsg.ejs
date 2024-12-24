@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages</title>
+</head>
+<body>
+  <h1>Messages</h1>
+  
+  <!-- Form for sending a message -->
+  <form action="/send" method="POST">
+    <label for="recipient">Recipient's Username:</label>
+    <input type="text" id="recipient" name="recipient" required><br><br>
+    
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+    
+    <button type="submit">Send Message</button>
+  </form>
+  
+  <hr>
+  
+  <!-- Display messages -->
+  <h2>Received Messages</h2>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Messages</title>
+</head>
+<body>
+  <h1>Doctor Messages</h1>
+  
+   <!-- Check if messages is defined and not null -->
+   <% if (messages && messages.length > 0) { %>
+    <!-- Display messages -->
+    <h2>Sent Messages</h2>
+    <ul>
+      <% messages.forEach(message => { %>
+        <li>
+          <strong>To:</strong> <%= message.recipient %><br>
+          <strong>Message:</strong> <%= message.message %><br>
+          <strong>Timestamp:</strong> <%= message.timestamp %>
+        </li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <!-- Display a message indicating no messages have been sent -->
+    <p>No messages sent by the doctor.</p>
+  <% } %>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Result</title>
+</head>
+<body>
+  <% if (userNotFound) { %>
+    <p>User not found</p>
+  <% } else if (invalidtype) { %>
+    <p>Invalid type: only students and doctors are supported</p>
+  <% } else { %>
+    <p>User found: <%= user.name %></p>
+    <p>type: <%= user.type %></p>
+    <% if (user.type === 'student') { %>
+      <h2>Subjects:</h2>
+      <div class="container">
+      <ul>
+        <% subjects.forEach(subject => { %>
+          <div class="container"></div>
+          <li><%= subject.name %></li>
+          <li><%= subject.code %></li>
+          <li><%= subject.grade %></li>
+        </div>
+
+        <% }); %>
+      </ul>
+    </div>
+    <% } else if (user.type === 'staff') { %>
+      <h2>Courses:</h2>
+      <ul>
+        <% courses.forEach(course => { %>
+          <li><%= course.doctorname %></li>
+          <li><%= course.name %></li>
+          <li><%= course.code %></li>
+        <% }); %>
+      </ul>
+    <% } %>
+  <% } %>
+</body>
+</html>
+
